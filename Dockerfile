@@ -3,6 +3,8 @@
 ### ---------------------
 FROM node:alpine AS assets
 
+RUN apk add git
+
 WORKDIR /src
 COPY package.json /src
 RUN npm install -q
